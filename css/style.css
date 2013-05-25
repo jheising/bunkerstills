@@ -1,0 +1,118 @@
+html
+{
+	min-height : 100%;
+	margin     : 0;
+	padding    : 0;
+}
+
+body
+{
+	min-height      : 100%;
+	background      : url('../img/main-bg.jpg') no-repeat center center fixed;
+	background-size : cover;
+	font-family     : "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style      : normal;
+	color           : #bbb;
+	font-weight     : 200;
+	font-size       : 15px;
+	line-height     : 1.6;
+}
+
+h1, h2, h3, h4, h5
+{
+	font-family    : 'Roboto Slab', serif;
+	font-weight    : 400;
+	color          : #fff;
+	text-transform : uppercase;
+	margin-top: 45px;
+}
+
+h1
+{
+	font-size : 30px;
+	padding-bottom: 20px;
+}
+
+h2
+{
+	font-size : 22px;
+}
+
+#main-content
+{
+	padding-top : 10%;
+	padding-bottom: 10%;
+}
+
+.pull-left img
+{
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#left-content
+{
+	position   : fixed;
+	top        : 0;
+	bottom     : 0;
+	margin     : auto;
+	height     : 255px;
+	width      : 50%;
+	text-align : center;
+}
+
+@media (max-width: 767px)
+{
+	#left-content
+	{
+		position   : relative;
+		padding-top: 20px;
+		text-align : center;
+		width: 100%;
+	}
+}
+
+.table th, .table td
+{
+	border-top     : 1px solid #555;
+}
+
+p
+{
+	margin : 0 0 20px;
+}
+
+a
+{
+	color           : #807d5d;
+	text-decoration : none;
+}
+
+a:hover, a:focus
+{
+	color           : #bbbdbc;
+	text-decoration : underline;
+}
+
+.lead
+{
+	font-weight: 100;
+}
+
+strong
+{
+	color: #ddd;
+}
+
+td.spec-value
+{
+	color:#ddd;
+	font-weight : 300;
+}
+
+td.spec-name
+{
+	text-align: right;
+	padding-right : 20px;
+}

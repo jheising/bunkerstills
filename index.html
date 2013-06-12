@@ -12,6 +12,9 @@
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-lightbox.min.js"></script>
 </head>
 <body>
 <div id="left-content">
@@ -135,6 +138,213 @@
                 the craft distillation industry at large. The Heising-330 was born.</p>
             <p>Since that date, the Heising-330 has been tested, refined and updated in the real-world with thousands of gallons of alcohol, and has produced award-winning and top-selling spirits for a loyal legion of fans.</p>
 
+            <h2>FAQs</h2>
+
+            <p class="faq">
+                <strong>Q.</strong> <strong>Why should I consider a continuous still?</strong>
+                <br/>
+                <strong>A.</strong> The main benefits of a continuous still are consistency, efficiency and time-savings. As most know, a batch still requires constant monitoring over a run in order to make proper cuts.
+                In a continuous still, the heads, hearts and tails come out through separate parrots/draws and are consistent throughout the entire run&mdash; once warmed up, the first drops of product will taste exactly
+                the same as the last drops. This effectively allows the distiller to start it, and then leave it alone, allowing more time to focus on other parts of their business.
+            </p>
+
+            <p class="faq">
+                <strong>Q.</strong> <strong>I've heard that you can't make cuts with a continuous still&mdash; is this true? Is it possible to make great whiskey?</strong>
+                <br/>
+                <strong>A.</strong> Yes, you can absolutely make great whiskey with a continuous still! The first thing to realize is that a continuous still works on the same basic principles of that of a batch still. The same wash that
+                you put into a traditional still will result in the same types and flavors of alcohol coming out of a continuous still. The main difference is in the way in which those components are "sorted" and exposed from the still. Unlike a
+                batch still where you have to wait for the heads hearts and tails to arrive in a serial fashion over time, with a continuous still they all come at once (in separate parrots/draws) and their ratio remains the same for as long as
+                the still is kept running. Therefore with a continuous still, the distiller can adjust for the desired flavor profile at the start of the run, and once it's set it can be left without further intervention until the source of wash
+                runs out.
+            </p>
+
+            <p class="faq">
+                <strong>Q.</strong> <strong>Completely automated? Doesn't that take away the "craft" in craft distillery?</strong>
+                <br/>
+                <strong>A.</strong> The still is completely automated in order to maintain precise temperature and flow control so that the resulting output is consistent and pure. While the output is consistent, the wash you feed it and in what
+                ratio you mix your hearts and tails to achieve a certain flavor profile is entirely left up to the distiller. While some might consider <em>any</em> automation to be against the definition of "craft", you might consider an analogy
+                of a blacksmith or glassblower who uses a computer controlled furnace to produce consistent and high quality raw materials, but what you do with those materials could never be automated.
+            </p>
+
+            <p class="faq">
+                <strong>Q.</strong> <strong>Leave the still alone? Is that safe?</strong>
+                <br/>
+                <strong>A.</strong> While it might seem crazy, yes you can actually leave the still alone and let it run unattended! The Heising-330 continuous still is intrinsically safe for a few reasons:
+            <ul>
+                <li>Being electrically fired, there is no open flame source or high pressure steam that could cause a fire or burns.</li>
+                <li>The still runs at just below the boiling point of water and at standard atmospheric pressures, so the risk of explosion due to high pressure is essentially zero.</li>
+                <li>A large network of computer monitored sensors within the still keep a constant eye on conditions and can alert the distiller and automatically shut the system down should a problem arise.</li>
+            </ul>
+            </p>
+
+            <p class="faq">
+                <strong>Q.</strong>
+                <strong>2 gallons per hour? That seems pretty slow to me.</strong>
+                <br/>
+                <strong>A.</strong> At first glance, it doesn't seem like much, but when you consider that the Heising-330 can run continuously, 24x7, it really starts to add up. That's why when we talk about the capacity of the still, it
+                makes more sense to think in terms of gallons per week. For example, let's do the math on some wash at 12% ABV distilled into a 95% ABV spirit:
+            </p>
+                <pre>2 (GPH flow rate) * 0.12 (wash ABV) * 0.9 (still efficiency) / 0.95 (output ABV) = 0.227 GPH (@ 95% ABV)</pre>
+                <p>Now we can consider what's possible to distill in one week:</p>
+                <pre>0.227 GPH * 24 hours * 7 days = 38.136 Gal (@ 95% ABV) per week</pre>
+                <p>Let's look at it in terms of a finished product, like vodka:</p>
+                <pre>38.136 GPW (@ 95% ABV) / 0.4 (40% ABV) = 95.34 Gallons of 80 proof vodka in 1 week</pre>
+                <p>Now it's starting to add up! Let's look at that in terms of bottles:</p>
+                <pre>95.34 Gallons * 3.78541 = 360.9 Liters
+360.9 Liters * 1000 / 750 ml = 481 bottles in 1 week</pre>
+                <p>That's <strong>481 bottles per week</strong> of 40 proof vodka.</p>
+                <p>Try the calculation yourself:</p>
+                <form class="form-horizontal" action="javascript:void(0);">
+                    <div class="control-group">
+                        <label class="control-label" for="feedABV">Feed Wash</label>
+
+                        <div class="controls">
+                            <div class="input-append calculator-input">
+                                <input class="input-small text-right" id="feedABV" type="text" value="12">
+                                <span class="add-on">% ABV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="distillateABV">Desired Distillate</label>
+
+                        <div class="controls">
+                            <div class="input-append calculator-input">
+                                <input class="input-small text-right" id="distillateABV" type="text" value="95">
+                                <span class="add-on">% ABV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="finalProof">Final Bottled Spirit</label>
+
+                        <div class="controls">
+                            <div class="input-append calculator-input">
+                                <input class="input-small text-right" id="finalProof" type="text" value="80">
+                                <span class="add-on">Proof</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="bottleSize">Bottle Size</label>
+
+                        <div class="controls">
+                            <div class="input-append calculator-input">
+                                <input class="input-small text-right" id="bottleSize" type="text" value="750">
+                                <span class="add-on">ml</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" onclick="calculateProduction();" class="btn">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+
+                        <div class="controls">
+                            <span class="help-inline calculator-result" id="gallonsPerHour"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+
+                        <div class="controls">
+                            <span class="help-inline calculator-result" id="gallonsPerWeek"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+
+                        <div class="controls">
+                            <span class="help-inline calculator-result" id="bottlesPerWeek"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+
+                        <div class="controls">
+                            <span class="help-inline calculator-result" id="casesPerYear"></span>
+                        </div>
+                    </div>
+
+                </form>
+            <script type="text/javascript">
+                $(document).ready(function(){
+
+                    function addCommas(nStr)
+                    {
+                        nStr += '';
+                        x = nStr.split('.');
+                        x1 = x[0];
+                        x2 = x.length > 1 ? '.' + x[1] : '';
+                        var rgx = /(\d+)(\d{3})/;
+                        while(rgx.test(x1))
+                        {
+                            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                        }
+                        return x1 + x2;
+                    }
+
+                    function calculateProduction()
+                    {
+
+                        try
+                        {
+                            var feedABV = parseFloat($("#feedABV").val());
+                            var distillateABV = parseFloat($("#distillateABV").val());
+                            var finalProof = parseFloat($("#finalProof").val());
+                            var bottleSize = parseFloat($("#bottleSize").val());
+                            var finalABV = finalProof / 2.0 / 100.0;
+
+                            if(feedABV > 1.0)
+                            {
+                                feedABV = feedABV / 100.0;
+                            }
+
+                            if(distillateABV > 1.0)
+                            {
+                                distillateABV = distillateABV / 100.0;
+                            }
+
+                            var gallonsPerHour = parseFloat((2 * feedABV * 0.9 / distillateABV).toFixed(3));
+                            var gallonsPerWeek = parseFloat((gallonsPerHour * 24 * 7).toFixed(3));
+                            var gallonsPerWeekFinal = parseFloat((gallonsPerWeek / finalABV).toFixed(3));
+                            var bottlesPerWeek = Math.floor(gallonsPerWeekFinal * 3785.41 / bottleSize);
+                            var casesPerYear = Math.floor(bottlesPerWeek / 12 * 52.1775);
+
+                            if(isNaN(gallonsPerHour) || isNaN(gallonsPerWeek) || isNaN(gallonsPerWeekFinal) || isNaN(bottlesPerWeek) || isNaN(casesPerYear))
+                            {
+                                throw "";
+                            }
+
+                            var distillateABVDisplay = (distillateABV * 100);
+
+                            $("#gallonsPerHour").text(gallonsPerHour + " Gallons Per Hour @ " + distillateABVDisplay + "% ABV");
+                            $("#gallonsPerWeek").text(gallonsPerWeek + " Gallons Per Week @ " + distillateABVDisplay + "% ABV");
+                            $("#bottlesPerWeek").text(addCommas(bottlesPerWeek) + " Bottles Per Week @ " + finalProof + " Proof");
+                            $("#casesPerYear").text(addCommas(casesPerYear) + " Cases Per Year");
+                        }
+                        catch(e)
+                        {
+                            $("#gallonsPerHour").text("");
+                            $("#gallonsPerWeek").text("");
+                            $("#bottlesPerWeek").text("");
+                            $("#casesPerYear").text("");
+                        }
+                    }
+
+                    $('.calculator-input').on('change', function(e)
+                    {
+                        calculateProduction();
+                    })
+
+                    calculateProduction();
+                });
+            </script>
+
+            <h2>Investors</h2>
+            <p>Are you interested in helping continuous distillation revolutionize the craft distillery industry? Bunker Stills is actively looking for investors to help take the Heising-330 to market. To find out more,
+            please Email at us <a href="mailto:investors@bunkerstills.com">investors@bunkerstills.com</a>.
+            </p>
+
             <h2>See it work</h2>
             <p>The Heising-330 is still undergoing final development and will be available for public and on-site demonstrations soon. But in the meantime, if you're in the Seattle, WA area
             you can schedule a time to visit the <a href="http://www.whidbeydistillery.com">Whidbey Island Distillery</a> for a demo and see it running for yourself. Please contact
@@ -168,7 +378,7 @@
             </div>
             <!--End mc_embed_signup-->
             <h2>Latest News</h2>
-            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/bunkerstills" height="300" data-chrome="transparent nofooter noborders" data-widget-id="338079875766292482">Tweets by @bunkerstills</a>
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/bunkerstills" height="300" data-chrome="transparent noborders" data-widget-id="338079875766292482">Tweets by @bunkerstills</a>
             <script>!function(d, s, id)
             {
                 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
@@ -184,9 +394,6 @@
         </div>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-lightbox.min.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

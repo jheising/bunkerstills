@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5
 	font-weight    : 400;
 	color          : #fff;
 	text-transform : uppercase;
-	margin-top: 45px;
 }
 
 h1
@@ -36,6 +35,7 @@ h1
 h2
 {
 	font-size : 22px;
+	margin-top:  80px;
 }
 
 #main-content
@@ -115,4 +115,21 @@ td.spec-name
 {
 	text-align: right;
 	padding-right : 20px;
+}
+
+.faq strong
+{
+	padding-right: 10px;
+}
+
+.input-append .add-on, .input-prepend .add-on
+{
+	color: #000;
+}
+
+.calculator-result
+{
+	font-weight: bold;
+	font-size: larger;
+	color : #fff;
 }

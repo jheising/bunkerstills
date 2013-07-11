@@ -237,7 +237,7 @@
                     </div>
                     <div class="control-group">
                         <div class="controls">
-                            <button type="submit" onclick="calculateProduction();" class="btn">Calculate</button>
+                            <button type="submit" id="calc-button" class="btn">Calculate</button>
                         </div>
                     </div>
                     <div class="control-group">
@@ -332,6 +332,11 @@
                     }
 
                     $('.calculator-input').on('change', function(e)
+                    {
+                        calculateProduction();
+                    })
+                    
+                    $('#calc-button').on('click', function(e)
                     {
                         calculateProduction();
                     })

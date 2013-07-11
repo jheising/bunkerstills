@@ -306,7 +306,7 @@
 
                             var gallonsPerHour = parseFloat((2 * feedABV * 0.9 / distillateABV).toFixed(3));
                             var gallonsPerWeek = parseFloat((gallonsPerHour * 24 * 7).toFixed(3));
-                            var gallonsPerWeekFinal = parseFloat((gallonsPerWeek / finalABV).toFixed(3));
+                            var gallonsPerWeekFinal = parseFloat((gallonsPerWeek * distillateABV / finalABV).toFixed(3));
                             var bottlesPerWeek = Math.floor(gallonsPerWeekFinal * 3785.41 / bottleSize);
                             var casesPerYear = Math.floor(bottlesPerWeek / 12 * 52.1775);
 
